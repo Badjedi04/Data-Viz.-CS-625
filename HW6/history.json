@@ -1,0 +1,249 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "Geo Level",
+    "description": "Remove column Geo Level"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "State ANSI",
+    "description": "Remove column State ANSI"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Ag District",
+    "description": "Remove column Ag District"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Ag District Code",
+    "description": "Remove column Ag District Code"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "County",
+    "description": "Remove column County"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "County ANSI",
+    "description": "Remove column County ANSI"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Zip Code",
+    "description": "Remove column Zip Code"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Region",
+    "description": "Remove column Region"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "watershed_code",
+    "description": "Remove column watershed_code"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Watershed",
+    "description": "Remove column Watershed"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Commodity",
+    "description": "Remove column Commodity"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Domain",
+    "description": "Remove column Domain"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Domain Category",
+    "description": "Remove column Domain Category"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "CV (%)",
+    "description": "Remove column CV (%)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Data Item",
+          "expression": "value",
+          "columnName": "Data Item",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "CORN - CONDITION, MEASURED IN PCT EXCELLENT",
+                "l": "CORN - CONDITION, MEASURED IN PCT EXCELLENT"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "State",
+          "expression": "value",
+          "columnName": "State",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "KANSAS",
+                "l": "KANSAS"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Value",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Value using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Data Item",
+          "expression": "value",
+          "columnName": "Data Item",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "CORN - CONDITION, MEASURED IN PCT EXCELLENT",
+                "l": "CORN - CONDITION, MEASURED IN PCT EXCELLENT"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Value",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Value using expression value.toNumber()"
+  },
+  {
+    "op": "core/row-reorder",
+    "mode": "row-based",
+    "sorting": {
+      "criteria": [
+        {
+          "valueType": "string",
+          "column": "State",
+          "blankPosition": 2,
+          "errorPosition": 1,
+          "reverse": false,
+          "caseSensitive": false
+        }
+      ]
+    },
+    "description": "Reorder rows"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Period",
+    "description": "Remove column Period"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Week Ending",
+    "description": "Remove column Week Ending"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Data Item",
+          "expression": "value",
+          "columnName": "Data Item",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "CORN - CONDITION, MEASURED IN PCT EXCELLENT",
+                "l": "CORN - CONDITION, MEASURED IN PCT EXCELLENT"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "State",
+          "expression": "value",
+          "columnName": "State",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "KANSAS",
+                "l": "KANSAS"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Value",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Value using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Value",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Value using expression value.toNumber()"
+  }
+]
